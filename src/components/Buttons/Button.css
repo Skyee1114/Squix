@@ -1,0 +1,29 @@
+button.button {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+button.button::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: linear-gradient(180deg, #FFCB5C -12.86%, #FFB800 111.98%); /* Hover gradient */
+    transition: opacity 0.3s;
+    opacity: 0;
+    color: white;    
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.button:hover::after {
+    opacity: 1;
+}
+
+.accordion button{
+    border-radius: 3px;
+}
